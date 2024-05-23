@@ -1,0 +1,21 @@
+### Insert a new user
+curl -X POST -H "Content-Type: application/json" -d '{"name": "AlphonseDesjardins", "username": "alph_desj", "password": "strongPassword123"}' http://localhost:3000/users -H 'authorization: Bearer  {{$dotenv AUTH_TOKEN}}'
+
+### Get ALL users
+curl -X GET http://localhost:3000/users -H 'authorization: Bearer  {{$dotenv AUTH_TOKEN}}'
+
+### Get a user by ID 
+curl -X GET http://localhost:3000/users/0 -H 'authorization: Bearer  {{$dotenv AUTH_TOKEN}}'
+
+### Update a user
+curl -X PUT -d '{"name": "Gabriel-Alphonse Desjardins"}' http://localhost:3000/users/1 -H "Content-Type: application/json" -H 'authorization: Bearer  {{$dotenv AUTH_TOKEN}}'
+
+### Delete a user
+curl -X DELETE http://localhost:3000/users/0 -H 'authorization: Bearer {{$dotenv AUTH_TOKEN}}'
+
+### Get Access Token
+curl --request POST \
+  --url https://YOUR_URL/oauth/token \
+  --header 'content-type: application/json' \
+  --data '{"client_id":"CLIENT_ID","client_secret":"CLIENT_SECRET","audience":"http://localhost:3000","grant_type":"client_credentials"}'
+  

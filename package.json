@@ -1,0 +1,26 @@
+{
+  "name": "desjardins-test",
+  "version": "1.0.0",
+  "description": "Desjardins test ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon src/server.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js "
+  },
+  "author": "vlad",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-oauth2-jwt-bearer": "^1.6.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "superagent": "^9.0.2",
+    "supertest": "^7.0.0"
+  }
+}
